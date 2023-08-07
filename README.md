@@ -1,3 +1,12 @@
+# GETHEBOOK - Review Books Website
+This is my collage project but is NOT FINISHED YET.\
+Gethebook is web app that can review, rating, wishlist, and mark as read books so user can get a recommend books based on common book that user mark as read.
+
+## Preview (NOT FINISH)
+![image](https://github.com/naufalzp/gethebook-review-books/assets/98691805/7a593d11-18d3-4837-a2c3-fc0947dcb24a)\
+
+## Technology used
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
