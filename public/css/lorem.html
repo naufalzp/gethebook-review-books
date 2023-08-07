@@ -1,0 +1,25 @@
+App\Models\Post::create([
+    'tittle' => 'Judul Ketiga',
+    'category_id' => '3',
+    'slug'=> 'judul-ketiga',
+    'excerpt'=>'lorem ketiga',
+    'body'=>'<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis eum exercitationem laudantium maxime totam quaerat perspiciatis odio ut? Delectus consequatur dolorum laboriosam eius minus quia hic explicabo commodi quae nesciunt error sed ducimus, laudantium consectetur recusandae esse dolorem saepe porro molestias ratione! Nostrum libero facere alias nulla, sit veniam iusto natus inventore enim tempora sequi ipsum placeat dolore consequuntur accusamus quas necessitatibus, officia, illo delectus iste nisi reiciendis quos. Temporibus ex earum, doloribus nisi,</p> <p> quaerat cumque, pariatur amet maxime praesentium commodi voluptates modi in accusantium quia perferendis dolores. Animi, a impedit. Delectus laboriosam id dicta sit repellat exercitationem temporibus, quibusdam at aliquid rerum veniam. Obcaecati suscipit reprehenderit deserunt ea laudantium placeat maiores hic, ut eius unde doloremque exercitationem minus error.</p>'
+])
+App\Models\Category::create([
+    'name' => 'Personal',
+    'slug' => 'personal'
+])
+
+App\Models\Book::where('slug', '')->chunk(500, function($recs){
+    $recs->map(function($record){
+      $record->update([
+        'slug' => Str::slug($record->title_book)
+      ]);
+    });
+  });
+
+
+
+
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis eum exercitationem laudantium maxime totam quaerat perspiciatis odio ut? Delectus consequatur dolorum laboriosam eius minus quia hic explicabo commodi quae nesciunt error sed ducimus, laudantium consectetur recusandae esse dolorem saepe porro molestias ratione! Nostrum libero facere alias nulla, sit veniam iusto natus inventore enim tempora sequi ipsum placeat dolore consequuntur accusamus quas necessitatibus, officia, illo delectus iste nisi reiciendis quos. Temporibus ex earum, doloribus nisi,</p> <p> quaerat cumque, pariatur amet maxime praesentium commodi voluptates modi in accusantium quia perferendis dolores. Animi, a impedit. Delectus laboriosam id dicta sit repellat exercitationem temporibus, quibusdam at aliquid rerum veniam. Obcaecati suscipit reprehenderit deserunt ea laudantium placeat maiores hic, ut eius unde doloremque exercitationem minus error.</p>
